@@ -1,12 +1,13 @@
 #:kivy 1.0
 
-#:import MDFileManager kivymd.uix.filemanager.MDFileManager
 #:import expanduser os.path.expanduser
 #:import DroneFileManager dronebuilder.components.filemanager.DroneFileManager
+#:import WelcomeScreen dronebuilder.components.welcome.WelcomeScreen
 
-<WelcomeScreen@MDScreen>:
+<WelcomeScreen>:
     name: "welcome"
     md_bg_color: (30/255.0,55/255.0,90/255.0,1)
+
     MDBoxLayout:
         orientation: "vertical"
         # adaptive_height: True
@@ -59,4 +60,16 @@
                         DroneFileManager(opentype="new").show()
 
         Widget:
+            size_hint_y: None
+            height: "20sp"
+
+        MDLabel:
             adaptive_height: True
+            markup: True
+            text: "[b]Recent:[/b]"
+            color: 0.8, 0.8, 0.8, 1
+            font_style: "Subtitle1"
+
+        ScrollView:
+            MDList:
+                id: recent_files_container

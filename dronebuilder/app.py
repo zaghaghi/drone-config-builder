@@ -10,6 +10,7 @@ class WindowManager(ScreenManager):
 
 class MainApp(MDApp):
     def build(self):
+        self.title = "Drone Config Editor"
         resource_add_path("dronebuilder/screens")
         return Builder.load_file("manager.kv")
 
