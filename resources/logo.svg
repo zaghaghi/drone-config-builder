@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 153.52344 151.80078"
+   height="151.80078"
+   width="153.52344"
+   id="svg62"
+   version="1.1">
+  <metadata
+     id="metadata68">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs66" />
+  <g
+     transform="translate(-23.09375,-24.138672)"
+     id="g70">
+    <g
+       id="g927">
+      <path
+         id="rect911"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.09219;stroke-linecap:round;stroke-opacity:1"
+         d="m 98.992188,44.138672 c -8.42737,0 -16.400267,1.85818 -23.552735,5.169922 l 18.441406,18.371094 c 4.381862,-2.889212 9.635401,-4.572266 15.298831,-4.572266 15.38054,0 27.76172,12.381171 27.76172,27.761719 0,5.62425 -1.6611,10.843479 -4.51368,15.207029 l 18.56446,18.49219 c 3.60121,-7.39847 5.625,-15.71825 5.625,-24.5293 0,-30.968424 -24.93196,-55.900388 -55.90039,-55.900388 z M 65.082031,55.550781 C 51.704468,65.745974 43.09375,81.846276 43.09375,100.03906 c 0,30.96843 24.93001,55.90039 55.898438,55.90039 h 1.724612 c 17.8226,0 33.6335,-8.26814 43.85547,-21.18164 l -20.50782,-20.43359 c -4.29782,2.72587 -9.39759,4.30859 -14.88476,4.30859 -15.380556,0 -27.763674,-12.38312 -27.763674,-27.763669 0,-5.45214 1.562007,-10.522123 4.255859,-14.802735 z" />
+      <rect
+         ry="16.454706"
+         y="74.415016"
+         x="92.724579"
+         height="32.909412"
+         width="32.909412"
+         id="rect915"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.640936;stroke-linecap:round;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

@@ -1,15 +1,60 @@
 #:kivy 1.0
+
+#:import MDFileManager kivymd.uix.filemanager.MDFileManager
+#:import expanduser os.path.expanduser
+
 <WelcomeScreen@MDScreen>:
+    name: "welcome"
+    md_bg_color: (30/255.0,55/255.0,90/255.0,1)
     MDBoxLayout:
         orientation: "vertical"
+        # adaptive_height: True
+        padding: ["20sp", "20sp", "20sp", "20sp"]
+
+        AsyncImage:
+            source: "resources/logo.png"
 
         MDLabel:
-            text: "Hello"
-            font_color: "black"
-            font_size: 40
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            adaptive_height: True
+            text: "Welcome to Drone CI/CD Config Editor"
+            font_style: "H4"
+            halign: "center"
+            color: "white"
 
-        MDFillRoundFlatButton:
-            text: "Hello"
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
 
+        MDLabel:
+            adaptive_height: True
+            markup: True
+            text: "To start, open an existing [i].drone.yaml[/i] file or create a new config file"
+            halign: "center"
+            color: "white"
+
+        Widget:
+            size_hint_y: None
+            height: "20sp"
+
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint: (1, None)
+
+            MDBoxLayout:
+                orientation: "horizontal"
+                spacing: "20sp"
+
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                adaptive_width: True
+
+                MDRaisedButton:
+                    text: "Open..."
+                    on_release:
+                        MDFileManager().show(expanduser("~"))
+                    md_bg_color: 24/255.0, 45/255.0, 73/255.0, 1
+
+                MDFlatButton:
+                    text: "New"
+                    on_release: app.root.current = "config"
+                    theme_text_color: "Custom"
+                    text_color: "white"
+
+        Widget:
+            adaptive_height: True
