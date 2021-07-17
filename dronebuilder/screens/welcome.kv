@@ -2,6 +2,7 @@
 
 #:import MDFileManager kivymd.uix.filemanager.MDFileManager
 #:import expanduser os.path.expanduser
+#:import DroneFileManager dronebuilder.components.filemanager.DroneFileManager
 
 <WelcomeScreen@MDScreen>:
     name: "welcome"
@@ -47,14 +48,15 @@
                 MDRaisedButton:
                     text: "Open..."
                     on_release:
-                        MDFileManager().show(expanduser("~"))
+                        DroneFileManager(opentype="open").show()
                     md_bg_color: 24/255.0, 45/255.0, 73/255.0, 1
 
                 MDFlatButton:
                     text: "New"
-                    on_release: app.root.current = "config"
                     theme_text_color: "Custom"
                     text_color: "white"
+                    on_release:
+                        DroneFileManager(opentype="new").show()
 
         Widget:
             adaptive_height: True
