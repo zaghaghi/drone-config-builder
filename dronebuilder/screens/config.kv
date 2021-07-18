@@ -1,10 +1,14 @@
 #:kivy 1.0
-<ConfigScreen@MDScreen>:
+
+#:import ConfigScreen dronebuilder.components.config.ConfigScreen
+
+<ConfigScreen>:
     name: "config"
     MDBoxLayout:
         orientation: "vertical"
 
         MDLabel:
+            id: filepath
             text: "CONFIG"
             font_color: "black"
             font_size: 40

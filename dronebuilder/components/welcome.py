@@ -1,5 +1,6 @@
 from os.path import expanduser, split
 
+from dronebuilder.components.filemanager import DroneFileManager
 from dronebuilder.utils.storage import setting
 from kivy.clock import Clock
 from kivymd.uix.list import OneLineListItem
@@ -36,5 +37,21 @@ class WelcomeScreen(MDScreen):
             list_item.bind(on_release=self._item_selected)
             self.ids.recent_files_container.add_widget(list_item)
 
-    def _item_selected(self, list_item):
-        print(list_item.filepath)
+    def _item_selected(self, list_item: RecentFileListItem) -> None:
+        self.open_drone_file(list_item.filepath)
+
+    def browse_open_drone_file(self) -> None:
+        manager = DroneFileManager(
+            opentype="open", select_callback=self.select_drone_file
+        )
+        manager.show()
+
+    def browse_new_drone_file(self) -> None:
+        manager = DroneFileManager(
+            opentype="new", select_callback=self.select_drone_file
+        )
+        manager.show()
+
+    def select_drone_file(self, filepath: str) -> None:
+        self.manager.current_filepath = filepath
+        self.manager.current = "config"

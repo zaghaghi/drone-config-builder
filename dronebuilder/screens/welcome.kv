@@ -48,16 +48,14 @@
 
                 MDRaisedButton:
                     text: "Open..."
-                    on_release:
-                        DroneFileManager(opentype="open").show()
+                    on_release: root.browse_open_drone_file()
                     md_bg_color: 24/255.0, 45/255.0, 73/255.0, 1
 
                 MDFlatButton:
                     text: "New"
                     theme_text_color: "Custom"
                     text_color: "white"
-                    on_release:
-                        DroneFileManager(opentype="new").show()
+                    on_release: root.browse_new_drone_file()
 
         Widget:
             size_hint_y: None
